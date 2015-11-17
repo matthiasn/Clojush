@@ -94,7 +94,7 @@ to [github pages](http://lspector.github.io/Clojush/), through Travis.
 To generate them locally run `lein doc` and then open `doc/index.html`.
 
 Currently generating the docs have some unintended side effects of running some examples,
-[because we couldn't figure out how stop codox from loading all the files](https://github.com/weavejester/codox/issues/100).
+[because we couldn't figure out how to stop codox from loading all the files](https://github.com/weavejester/codox/issues/100).
 
 In the metadata, you can [skip functions](https://github.com/weavejester/codox#metadata-options)
 and also [link to other functions](https://github.com/weavejester/codox#docstring-formats).
@@ -104,7 +104,7 @@ Description
 
 Clojush is a version of the Push programming language for evolutionary 
 computation, and the PushGP genetic programming system, implemented in 
-clojure. More information about Push and PushGP can be found at 
+Clojure. More information about Push and PushGP can be found at 
 http://hampshire.edu/lspector/push.html.
 
 Clojush derives mainly from Push3 (for more information see
@@ -141,7 +141,7 @@ simplification. Clojush can serve as the foundation for other evolutionary
 algorithms, but only the core Push interpreter and a version of PushGP
 are provided here.
 
-Starting with version 2.0.0, the genomes of evolving individuals in Clojush are based on Plush (linear Push) genomes, which are translated into normal Push programs before execution. Plush genomes are composed of instruction maps, each of whic contains an instruction and potentially other metadata describing whether that instruction should be silenced, whether closing parentheses should follow it, etc.
+Starting with version 2.0.0, the genomes of evolving individuals in Clojush are based on Plush (linear Push) genomes, which are translated into normal Push programs before execution. Plush genomes are composed of instruction maps, each of which contains an instruction and potentially other metadata describing whether that instruction should be silenced, whether closing parentheses should follow it, etc.
 
 Usage
 -----
@@ -222,7 +222,7 @@ argument that must be provided (actually it too has a default, but it makes
 no sense to rely on that) is :error-function, which should be a function that
 takes a Push program and returns a list of errors. Note that this assumes 
 that you will be doing single-objective evolution with the objective being 
-thought of as an error to be minimized. This assumption not intrinsic to Push
+thought of as an error to be minimized. This assumption is not intrinsic to Push
 or PushGP; it's just the simplest and most standard thing to do, so
 it's what I've done here. One could easily hack around that. In the most
 generic applications you'll want to have your error function run through a
@@ -316,7 +316,7 @@ specification:
 - Clojush instruction names use "_" instead of "." since the latter has
   special meaning when used in Clojure symbols.
 - Equality instructions use "eq" rather than "=" since the latter in not 
-  explicitly allowed in clojure symbols.
+  explicitly allowed in Clojure symbols.
 - for similar reasons +, -, *, /, %, <, and > are replaced with  add, sub, 
   mult, div, mod, lt, and gt.
 - Boolean literals are true and false (instead of TRUE and FALSE in 
